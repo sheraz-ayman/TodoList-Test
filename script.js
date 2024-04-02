@@ -55,4 +55,5 @@ function createTask(taskText) {
 //Event listener for add btn
 addTask.addEventListener('click', function () {
     createTask(inputTask.value);
+    console.log("button was clicked");
 });
