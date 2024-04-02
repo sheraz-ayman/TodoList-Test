@@ -55,7 +55,8 @@ const ToDoFunc = () => {
 
     const editTask = async (task, id) => {
         try {
-            await axios.put(`https://localhost:7262/api/todos/${id}`, { ...todos.find(todo => todo.id === id),  task });
+            await axios.put(`https://localhost:7262/api/todos/${id}`, { ...todos.find(todo => todo.id === id), task });
+
             setTodos(todos.map(todo => todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo));
         } catch (error) {
             console.error('Error editing task:', error);
