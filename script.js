@@ -43,14 +43,7 @@ function createTask(taskText) {
         deleteButton.parentElement.remove();
     });
 
-    editButton.addEventListener('click', function () {
-        const currentText = li.innerText;
-        const newText = prompt('Edit task:', currentText);
-        if (newText !== null) {
-            li.innerText = newText;
-        }
-    });
-}
+
 
 //Event listener for add btn
 addTask.addEventListener('click', function () {
